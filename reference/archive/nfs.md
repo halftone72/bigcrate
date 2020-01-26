@@ -15,7 +15,7 @@ This will allow access to all mounts to any device on the home network. Replace 
 
 ---
 
-# Reference
+# Reference and Notes
 
 https://www.linuxbabe.com/ubuntu/nfs-share
 

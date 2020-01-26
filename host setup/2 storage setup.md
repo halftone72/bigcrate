@@ -1,5 +1,4 @@
 # Storage setup
-Reference: https://blog.linuxserver.io/2017/06/24/the-perfect-media-server-2017/
 
 Create mount points for the drives
 
@@ -27,3 +26,8 @@ Edit /etc/fstab and add to end
 Remount
 
 `sudo mount -a`
+---
+
+# Reference and Notes
+
+https://blog.linuxserver.io/2017/06/24/the-perfect-media-server-2017/

@@ -1,5 +1,4 @@
 # TARDISL13 (latest stable)
-_Based on instructions for original TARDIS (Time Machine share via SMB) image. Lucky 13_
 
 Make sure that prerequisites of filesystem and samba are complete first.
 _mount drives, including mergerfs, sudo apt install samba_
@@ -38,3 +37,8 @@ Restart samba
 
 `sudo service smbd restart`
 
+---
+
+# Reference and Notes
+
+_Based on instructions for original TARDIS (Time Machine share via SMB) image. Lucky 13_

@@ -1,9 +1,5 @@
 # SnapRAID
 
-http://www.havetheknowhow.com/Configure-the-server/Install-SnapRAID.html
-
-https://www.snapraid.it/faq
-
 ### Create directory and get files ready to compile (version 11.3 as of 13 January)
 
 ```
@@ -43,3 +39,11 @@ Save, then sync
 
 Scrub data for errors
 `sudo snapraid scrub`
+
+---
+
+# Reference and Notes
+
+http://www.havetheknowhow.com/Configure-the-server/Install-SnapRAID.html
+
+https://www.snapraid.it/faq

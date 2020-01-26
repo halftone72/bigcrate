@@ -22,6 +22,8 @@ sudo sysctl -w net.ipv6.conf.default.disable_ipv6=1
 9. Install the Guest Additions package with the command ./VBoxLinuxAdditions.run.
 10. Allow the installation to complete.
 
+---
+
 # Reference
 
 https://www.virtualbox.org/wiki/Downloads

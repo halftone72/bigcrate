@@ -36,7 +36,7 @@ ___Setup Samba shares. See 3 TARDIS___
 
 ---
 
-# Reference
+# Reference and Notes
 
 <https://system76.com/pop>
 
