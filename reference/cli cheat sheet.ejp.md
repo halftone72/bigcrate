@@ -26,10 +26,12 @@ To debug your system, run these commands:
 
 
 ## RSYNC
+
 `sudo rsync -avh --progress /media/4tb/the_outer_realm /media/outer_realm/legacy`
 `sudo rsync -avh --progress /media/4tb2 /media/outer_realm/sorted`
 
 ## Samba
+
 Save and restart samba
 `sudo service smbd restart`
 Create samba account for Linux user

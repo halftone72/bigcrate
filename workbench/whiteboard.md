@@ -6,7 +6,19 @@
 You may move ~/.steam to another partition, say /mnt/games/steam, then create symbolic link.
 ln -s /mnt/games/steam ~/.steam
 
+---
 
+ZFS Maintenance - reuse?
+
+You should probably set this maintenance to run automatically. Add this to your crontab with `crontab -e`
+
+```
+# zpool scrub every month
+0 2 1 * * /sbin/zpool scrub files && curl -fsS --retry 3 https://hc-ping.com/some-generated-uuid > /dev/null
+0 13 1 * * /sbin/zpool status
+```
+
+Note that I am using healthchecks.io to notify me of failures here, rather than email. Linuxserver makes a container for this if you'd like to self host.
 
 ---
 
