@@ -8,7 +8,7 @@ Set permissions
 
 `sudo chmod 0777 /mnt/storage /mnt/vmworld`
 
-`sudo chown halftone72:halftone72 /mnt/storage  /mnt/vmworld`
+`sudo chown -R halftone72:halftone72 /mnt/storage  /mnt/vmworld`
 
 **NOTE: run again after drives are mounted to update ownership on the drives**
 
