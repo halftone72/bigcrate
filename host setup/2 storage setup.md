@@ -4,14 +4,6 @@ Create mount points for the drives
 
 `sudo mkdir /mnt/cratedisk01 /mnt/cratedisk02 /mnt/cratedisk03 /mnt/crateparity01 /mnt/storage /mnt/vmworld`
 
-Set permissions
-
-`sudo chmod 0777 /mnt/storage /mnt/vmworld`
-
-`sudo chown -R halftone72:halftone72 /mnt/storage  /mnt/vmworld`
-
-**NOTE: run again after drives are mounted to update ownership on the drives**
-
 Edit /etc/fstab and add to end
 
 ```
@@ -26,6 +18,14 @@ Edit /etc/fstab and add to end
 Remount
 
 `sudo mount -a`
+
+Set permissions
+
+```
+sudo chmod 0777 /mnt/storage /mnt/vmworld
+sudo chown -R halftone72:halftone72 /mnt/storage  /mnt/vmworld
+```
+
 ---
 
 # Reference and Notes

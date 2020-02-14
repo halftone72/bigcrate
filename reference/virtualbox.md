@@ -2,13 +2,6 @@
 
 Download and install VirtualBox, then install the extension pack
 
-### Disable IPv6 NOT REQUIRED - REFERENCE ONLY
-
-```
-sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1
-sudo sysctl -w net.ipv6.conf.default.disable_ipv6=1
-```
-
 ### Install Guest Additions:
 
 1. Start VirtualBox.
@@ -24,6 +17,13 @@ sudo sysctl -w net.ipv6.conf.default.disable_ipv6=1
 
 ---
 
-# Reference
+# Reference and Notes
 
 https://www.virtualbox.org/wiki/Downloads
+
+### Disable IPv6 NOT REQUIRED - REFERENCE ONLY
+
+```
+sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1
+sudo sysctl -w net.ipv6.conf.default.disable_ipv6=1
+```

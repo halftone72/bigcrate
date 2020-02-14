@@ -10,6 +10,24 @@ Add connecting user
 Add user and password for Samba
 
 `sudo smbpasswd -a thedoctor`
+`sudo smbpasswd -a halftone72`
+
+Deploy updated smb.conf
+
+```
+sudo mv /etc/samba/smb.conf /etc/samba/smb.conf.bak
+sudo cp ~/bigcrate/host\ setup/config/smb.conf /etc/samba/smb.conf
+```
+
+Restart samba
+
+`sudo service smbd restart`
+
+---
+
+# Reference and Notes
+
+_Based on instructions for original TARDIS (Time Machine share via SMB) image. Lucky 13_
 
 Add Samba share entry with Time Machine specifics
 
@@ -33,12 +51,3 @@ Add at end of file:
     fruit:time machine = yes
 ```
 
-Restart samba
-
-`sudo service smbd restart`
-
----
-
-# Reference and Notes
-
-_Based on instructions for original TARDIS (Time Machine share via SMB) image. Lucky 13_
