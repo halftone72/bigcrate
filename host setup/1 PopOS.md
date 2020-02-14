@@ -1,5 +1,8 @@
 # Pop!_OS 19.10
 
+### Clone repository
+
+`sudo git clone https://github.com/halftone72/bigcrate.git`
 
 ### Settings
 
@@ -26,12 +29,11 @@ ___Set up mergerFS and Snapraid now. See 2 Storage Install___
 
 Install Dash to Dock, OpenWeather Gnome, and Gnome Tweaks extensions from the Gnome add-in in Firefox. **Configure extensions within Firefox**
 
-### Web installations
+### App installs
 
-<https://www.nomachine.com/>
-<https://code.visualstudio.com/Download>
+_See App Installs.md for more details. Steam should be installed earlier on due to library issues with updates (seem to avoid this by installing Steam right away)_
 
-___Setup Samba shares. See 3 TARDIS___
+___Setup Samba shares. See 3 Samba and TARDIS.md___
 
 
 ---

@@ -1,4 +1,4 @@
-# bigcrate info
+# bigcrate Hardware
 
 ### Case: CoolerMaster LAN box HAF XB EVO
 https://www.coolermaster.com/catalog/cases/lan-box/haf-xb-evo/
@@ -24,6 +24,8 @@ https://us.aoc.com/en/gaming-monitors/c27g1
 
 ### Wireless: Ubit WiFi 6 AX 2974 Mbps Dual Band 5GHz/2.4GHz PCI-E Wireless WiFi Network Adapter Card with Bluetooth 5.0 for Desktop
 http://www.evisionde.com/ProDetail.aspx?ProId=80
+
+---
 
 # Storage
 
@@ -54,21 +56,17 @@ Seagate Desktop 8TB External Hard Drive HDD – USB 3.0 for PC Laptop and Mac (S
 Seagate BarraCuda ST8000DM004 8TB 5400 RPM 256MB Cache SATA 6.0Gb/s 3.5"  
 Serial Number:      ZCT0RYDC
 
+---
 
-# Windows 10 Pro
-GCFJ2-VNX92-3FJCM-9PBQ3-DV66T
-Assigned to: bigcrate
-Activated: no
+WIN KEYS IN BITWARDEN
 
-KVN8D-W32H3-V4T64-TG9T2-3YH3B
-Assigned to: db94prod
-Activated: yes
+---
 
 # Network
 Hogwarts (home network)
 Ethernet
 192.168.1.200 (reserved)
 
-Azkaban 
+Azkaban (Currently Disabled)
 WiFi 
 192.168.3.x (DHCP)

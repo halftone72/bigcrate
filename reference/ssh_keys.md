@@ -17,6 +17,7 @@ Add a passphrase if desired for additional security. "your_email@example.com" is
 This connects but does not log on, however, it will require the password (not passphrase) for the connecting user.
 
 ---
+
 # Reference and Notes
 
 https://www.ostechnix.com/configure-ssh-key-based-authentication-linux/
