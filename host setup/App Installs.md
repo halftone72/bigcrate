@@ -15,8 +15,9 @@ Install Epic Game Store through the launchers setup (click on gear)
 
 **Note: this only installs the installer. Installer must be run to download and install updates and dependencies, including WINE**
 
+---
 
-# Visual Studio Code
+### Visual Studio Code
 
 ```
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
@@ -27,9 +28,12 @@ sudo apt-get update
 sudo apt-get install code
 ```
 
+---
+
 # VirtualBox
 
 ### Install
+
 Download and install VirtualBox from https://www.virtualbox.org/wiki/Downloads
 Extension pack is available from same link. Use if you need to use one of the extensions (https://www.virtualbox.org/manual/ch01.html#intro-installing)
 
