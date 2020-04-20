@@ -17,13 +17,13 @@ Edit /etc/fstab and add to end
 
 Remount
 
-`sudo mount -a`
+`sudo mount -a`
 
 Set permissions
 
 ```
 sudo chmod 0777 /mnt/storage /mnt/vmworld
-sudo chown -R halftone72:halftone72 /mnt/storage  /mnt/vmworld
+sudo chown -R halftone72:halftone72 /mnt/storage /mnt/vmworld
 ```
 
 ---

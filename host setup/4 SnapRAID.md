@@ -34,6 +34,8 @@ Install
 
 Copy config file snapraid.conf to /etc/snapraid.conf
 
+`sudo cp /mnt/cratedisk01/bigcrate/host\ setup/config/snapraid.conf /etc/snapraid.conf`
+
 Save, then sync
 `sudo snapraid sync`
 

@@ -16,7 +16,7 @@ Deploy updated smb.conf
 
 ```
 sudo mv /etc/samba/smb.conf /etc/samba/smb.conf.bak
-sudo cp ~/bigcrate/host\ setup/config/smb.conf /etc/samba/smb.conf
+sudo cp /mnt/cratedisk01/bigcrate/host\ setup/config/smb.conf /etc/samba/smb.conf
 ```
 
 Restart samba
