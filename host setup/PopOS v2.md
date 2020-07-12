@@ -5,11 +5,11 @@
 1. Boot into the Pop OS live image and open your terminal
 2. Create your partitions. I used:
 	- 512MiB fat32 for the boot partition
-	- 8GiB swap partition
+	- 64GiB swap partition
 	- the rest of the disk was a btrfs partition
 3. Install Pop!_OS using the graphical installer
 4. At the install type step, choose Custom (Advanced)
-	- Click on the first partition (set up as boot in your partition manager) and select Use Partition, select Format, select fat32, and the filesystem will be /boot/efi
+	- Click on the first partition (set up as boot in your partition manager) and select Use Partition, select Format, select fat32, and the filesystem will be /boot/efi **NOTE:** doesn't want to keep the boot partition as FAT32 but reformat to ext4. Trying without formatting.
 	- Click on the second partition (set up as swap in your partition manager), select Use Partition, use as Swap
 	- Click on your btrfs partition, select Use Partition, select Format, select btrfs, and / as the filesystem
 	- Make sure all of your partitions have a black checkmark icon on them
