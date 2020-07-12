@@ -186,6 +186,8 @@ Edit confit file
 Restart the service and run as root
 `sudo /etc/init.d/FAHClient stop`
 `sudo /etc/init.d/FAHClient -u root start`
+**NOTE:** instead of running as root, try adding halftone72 to video group (to use GPU)
+`sudo usermod -a -G video halftone72`
 
 Use the web client to configure name and confirm GPU is picking up jobs
 http://client.foldingathome.org
