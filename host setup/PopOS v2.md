@@ -2,7 +2,7 @@
 
 ###BTRFS drive setup
 
-1. Boot into the Pop OS live image and open your terminal
+1. Boot into the Pop OS live image and open your terminal **NOTE:** Choose EFI option from flash drive
 2. Create your partitions. I used:
 	- 512MiB fat32 for the boot partition
 	- 64GiB swap partition
@@ -15,15 +15,15 @@
 	- Make sure all of your partitions have a black checkmark icon on them
 5. Click Erase and Install
 6. When install finishes, DO NOT click Restart Device. Instead go to your trusty terminal to continue post-install steps
-7. make sure you are root
+7. make sure you are **root**
 8. Mount the newly-created btrfs filesystem to /mnt using the below command
-`mount -t btrfs -o subvolid=5,ssd,noatime,space_cache /dev/<yourrootpartition> /mnt`
+`mount -t btrfs -o subvolid=5,ssd,noatime,space_cache /dev/nvme0n1p3 /mnt`
 9. Create the "@" and "@home" subvolumes
 `btrfs subvol create /mnt/@`
 `btrfs subvol create /mnt/@home`
 10. Now, we need to move the folders in /mnt into the /mnt/@ subvolume
 `cd /mnt`
-` ls | grep -v @ | xargs mv -t @``
+`ls | grep -v @ | xargs mv -t @`
 11. Now, we have to edit the fstab to account for the changes made
 `cat /mnt/@/etc/fstab` #it should look something like the below
 
@@ -49,12 +49,12 @@ Use 'blkid' to print the universally unique identifier for a device; this may be
 # <file system>  <mount point>  <type>  <options>  <dump>  <pass>
   PARTUUID=8d5407ee-527a-4e67-af2a-a0ca648c5726  /boot/efi  vfat  umask=0077  0  0
           /dev/mapper/cryptswap  none  swap  defaults  0  0
-          UUID=0b3e7957-8861-439f-a02d-4be9db8e07cf  /  btrfs  defaults,subvol=@,ssd,noatime,space_cache  0  0
-          UUID=0b3e7957-8861-439f-a02d-4be9db8e07cf  /home btrfs defaults,subvol=@home,ssd,noatime,space_cache  0  0
+          UUID=458aebbe-2761-4b15-9737-cb26f7e72c48  /  btrfs  defaults,subvol=@,ssd,noatime,space_cache  0  0
+          UUID=458aebbe-2761-4b15-9737-cb26f7e72c48  /home btrfs defaults,subvol=@home,ssd,noatime,space_cache  0  0
 ```
 
 13. Once your fstab is saved, mount your efi partition
-`mount /dev/<yourEFIpartition> /mnt/@/boot/efi`
+`mount /dev/nvme0n1p1 /mnt/@/boot/efi`
 14.  Add `rootflags=subvol=@` to the options line of Pop_OS_current.conf
 `nano /mnt/@/boot/efi/loader/entries/Pop_OS-current.conf`
 Options line will look like:
