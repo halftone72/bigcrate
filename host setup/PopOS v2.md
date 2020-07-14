@@ -162,7 +162,7 @@ Install client
 `wget https://download.foldingathome.org/releases/public/release/fahclient/debian-testing-64bit/v7.4/fahclient_7.4.4_amd64.deb`
 `sudo dpkg -i --force-depends fahclient_7.4.4_amd64.deb`
 
-Edit confit file
+Edit config file
 `sudo nano /etc/fahclient/config.xml`
 
 ```
@@ -183,11 +183,47 @@ Edit confit file
 </config> 
 ```
 
-Restart the service and run as root
+Stop service
 `sudo /etc/init.d/FAHClient stop`
-`sudo /etc/init.d/FAHClient -u root start`
-**NOTE:** instead of running as root, try adding halftone72 to video group (to use GPU)
-`sudo usermod -a -G video halftone72`
+
+Move init script
+`sudo mv /etc/init.d/FAHClient /usr/local/bin`
+
+Create service file
+`sudo nano /etc/systemd/system/fahclient.service`
+
+Add contents to service file
+
+```
+[Unit]
+Description=Folding@Home V7 Client
+Documentation=https://folding.stanford.edu/home/the-software/
+
+[Service]
+Type=simple
+PIDFile=/var/run/fahclient.pid
+ExecStart=/usr/local/bin/FAHClient -v -u root start
+ExecReload=/usr/local/bin/FAHClient -v -u root restart
+ExecStop=/usr/local/bin/FAHClient -v -u root stop
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Modify file ownership and permissions
+`sudo chown root:root /etc/systemd/system/fahclient.service`
+`sudo chmod u=rw,go=r /etc/systemd/system/fahclient.service`
+
+Reload systemd manager config
+`sudo systemctl daemon-reload`
+
+Check system status
+`sudo systemctl status --full fahclient.service`
+
+Stop and start service
+`sudo systemctl stop fahclient.service`
+`sudo systemctl start fahclient.service`
 
 Use the web client to configure name and confirm GPU is picking up jobs
 http://client.foldingathome.org
@@ -203,4 +239,7 @@ https://devtalk.blender.org/t/install-amd-proprietary-opencl-on-pop-os-and-some-
 
 FAH command line options
 https://foldingathome.org/support/faq/installation-guides/linux/command-line-options/
+
+FAH convert to systemd service
+http://pedroivanlopez.com/install-fahclient-linux-systemd-service-unit/
 
