@@ -217,6 +217,9 @@ Reload systemd manager config
 Check system status
 `sudo systemctl status --full fahclient.service`
 
+Setup service to auto-start on reboot
+`sudo systemctl enable fahclient.service`
+
 Stop and start service
 `sudo systemctl stop fahclient.service`
 `sudo systemctl start fahclient.service`
