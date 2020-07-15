@@ -1,18 +1,17 @@
 # Pop!_OS 20.04 v2.0
 
-###BTRFS drive setup
+### BTRFS drive setup
 
 1. Boot into the Pop OS live image and open your terminal **NOTE:** Choose EFI option from flash drive
 2. Create your partitions. I used:
-	- 512MiB fat32 for the boot partition
-	- 64GiB swap partition
-	- the rest of the disk was a btrfs partition
+	* 512MiB fat32 for the boot partition
+	* 64GiB swap partition
+	* the rest of the disk was a btrfs partition
 3. Install Pop!_OS using the graphical installer
 4. At the install type step, choose Custom (Advanced)
-	- Click on the first partition (set up as boot in your partition manager) and select Use Partition, select Format, select fat32, and the filesystem will be /boot/efi **NOTE:** doesn't want to keep the boot partition as FAT32 but reformat to ext4. Trying without formatting.
-	- Click on the second partition (set up as swap in your partition manager), select Use Partition, use as Swap
-	- Click on your btrfs partition, select Use Partition, select Format, select btrfs, and / as the filesystem
-	- Make sure all of your partitions have a black checkmark icon on them
+	* Click on the first partition (set up as boot in your partition manager) and select Use Partition, select Format, select fat32, and the filesystem will be /boot/efi **NOTE:** If you see /boot or will only allow ext4 format, you need to boot using EFI option in step 1.
+	* Click on the second partition (set up as swap in your partition manager), select Use Partition, use as Swap
+	* Click on your btrfs partition, select Use Partition, select Format, select btrfs, and / as the filesystem. Make sure all of your partitions have a black checkmark icon on them
 5. Click Erase and Install
 6. When install finishes, DO NOT click Restart Device. Instead go to your trusty terminal to continue post-install steps
 7. make sure you are **root**
@@ -48,9 +47,8 @@ Use 'blkid' to print the universally unique identifier for a device; this may be
 #
 # <file system>  <mount point>  <type>  <options>  <dump>  <pass>
   PARTUUID=8d5407ee-527a-4e67-af2a-a0ca648c5726  /boot/efi  vfat  umask=0077  0  0
-          /dev/mapper/cryptswap  none  swap  defaults  0  0
-          UUID=458aebbe-2761-4b15-9737-cb26f7e72c48  /  btrfs  defaults,subvol=@,ssd,noatime,space_cache  0  0
-          UUID=458aebbe-2761-4b15-9737-cb26f7e72c48  /home btrfs defaults,subvol=@home,ssd,noatime,space_cache  0  0
+/dev/mapper/cryptswap  none  swap  defaults  0  0
+UUID=458aebbe-2761-4b15-9737-cb26f7e72c48  /  btrfs defaults,subvol=@,ssd,noatime,space_cache  0  0 UUID=458aebbe-2761-4b15-9737-cb26f7e72c48  /home btrfs defaults,subvol=@home,ssd,noatime,space_cache  0  0
 ```
 
 13. Once your fstab is saved, mount your efi partition
@@ -93,7 +91,7 @@ In that config file, add the `rootflags=subvol=@` under the default and user sec
 
 16. Now, you can go back to the install window and click *Restart Device*
 
-###Mount storage
+### Mount storage
 
 Get disk info
 `blkid`
@@ -120,14 +118,14 @@ dev/disk/by-id/wwn-0x5000c500b5162876 /mnt/storage auto nosuid,nodev,nofail,auto
 Mount storage pool
 `sudo mount -a`
 
-###Updates
+### Updates
 `sudo apt update && sudo apt upgrade`
 
-###Install some stuff
+### Install some stuff
 
 `sudo apt install btrfs-progs clinfo samba openssh-server glances lynx`
 
-###Install AMD drivers
+### Install AMD drivers
 
 Download drivers at https://www.amd.com/en/support/graphics/radeon-500-series/radeon-rx-500-series/radeon-rx-570
 
@@ -147,8 +145,6 @@ Modify to read:
 ```
 
 Install driver
-`./amdgpu-pro-install --opencl=legacy,pal --no-dkms --headless`
-Or if install errors,
 `./amdgpu-install --opencl=legacy,pal --no-dkms --headless`
 
 Test OpenCL
@@ -156,7 +152,7 @@ Test OpenCL
 
 Will return GPU details if working
 
-###FoldingAtHome
+### FoldingAtHome
 
 Install client
 `wget https://download.foldingathome.org/releases/public/release/fahclient/debian-testing-64bit/v7.4/fahclient_7.4.4_amd64.deb`
@@ -242,4 +238,3 @@ https://foldingathome.org/support/faq/installation-guides/linux/command-line-opt
 
 FAH convert to systemd service
 http://pedroivanlopez.com/install-fahclient-linux-systemd-service-unit/
-
