@@ -16,9 +16,7 @@ toplevel         (volume root directory, not to be mounted by default)
 ## System
 
 /dev/nvme0n1p1 - /boot/efi (FAT32)
-
 /dev/nvme0n1p2 - swap
-
 /dev/nvme0n1p3 - / (BTRFS)
 
 512 MB NVME
@@ -32,7 +30,11 @@ ID 264 gen 14900 top level 5 path @home
 
 ## NAS
 
-/dev/sdb /dev/sdc /dev/sdd /dev/sde
+/dev/sdb
+/dev/sdc
+/dev/sdd
+/dev/sde
+
 RAID10 (mirrored and striped) - 32 TB physical, 16 TB actual
 
 sudo btrfs subvolume list /mnt/storage
