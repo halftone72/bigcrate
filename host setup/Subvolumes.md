@@ -1,4 +1,4 @@
-_Last Updated 071620
+_Last Updated 071620_
 
 # Layout
 
@@ -16,8 +16,11 @@ toplevel         (volume root directory, not to be mounted by default)
 ## System
 
 /dev/nvme0n1p1 - /boot/efi (FAT32)
+
 /dev/nvme0n1p2 - swap
+
 /dev/nvme0n1p3 - / (BTRFS)
+
 512 MB NVME
 
 sudo btrfs subvolume list /
