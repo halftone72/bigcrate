@@ -1,7 +1,7 @@
 # Notes
 
 # Todo
-- [ ]
+- []
 
 # Commands
 
