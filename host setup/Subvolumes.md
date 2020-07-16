@@ -21,6 +21,15 @@ toplevel         (volume root directory, not to be mounted by default)
 
 512 MB NVME
 
+```
+toplevel          (volume root directory, not to be mounted by default)
+  +-- @           (subvolume root directory, to be mounted at /)
+  +-- @home       (subvolume root directory, to be mounted at /home)
+  +-- var         (directory)
+  |   \-- www     (subvolume root directory, to be mounted at /var/www)
+  \-- postgres    (subvolume root directory, to be mounted at /var/lib/postgresql)
+```
+
 sudo btrfs subvolume list /
 
 ```
