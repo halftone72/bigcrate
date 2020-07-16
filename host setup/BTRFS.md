@@ -1,10 +1,10 @@
 # Notes
 
 # Todo
-- []
+- [ ]
 
 # Commands
-
+---
 # BTRFS system drive setup
 
 1. Boot into the Pop OS live image and open your terminal **NOTE:** Choose EFI option from flash drive
