@@ -25,9 +25,6 @@ toplevel         (volume root directory, not to be mounted by default)
 toplevel          (volume root directory, not to be mounted by default)
   +-- @           (subvolume root directory, to be mounted at /)
   +-- @home       (subvolume root directory, to be mounted at /home)
-  +-- var         (directory)
-  |   \-- www     (subvolume root directory, to be mounted at /var/www)
-  \-- postgres    (subvolume root directory, to be mounted at /var/lib/postgresql)
 ```
 
 sudo btrfs subvolume list /
@@ -57,6 +54,19 @@ ID 9088 gen 44260 top level 5 path @loading_dock
 ID 9089 gen 43384 top level 5 path @media_center
 ID 9090 gen 43952 top level 5 path @outer_realm
 ID 9098 gen 44266 top level 5 path @library
+```
+
+Layout
+```
+toplevel            (volume root directory, not to be mounted by default)
+  +-- @appstore     (subvolume root directory, to be mounted at /mnt/appstore)
+  +-- @arcade       (subvolume root directory, to be mounted at /mnt/arcade)
+  +-- @archive      (subvolume root directory, to be mounted at /mnt/archive)
+  +-- @junkdrawer   (subvolume root directory, to be mounted at /mnt/junkdrawer)
+  +-- @loading_dock (subvolume root directory, to be mounted at /mnt/loading_dock)
+  +-- @media_center (subvolume root directory, to be mounted at /mnt/media_center)
+  +-- @outer_realm  (subvolume root directory, to be mounted at /mnt/outer_realm)
+  +-- @library      (subvolume root directory, to be mounted at /mnt/library)
 ```
 
 # /etc/fstab
