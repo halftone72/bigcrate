@@ -9,7 +9,7 @@ chsh -s $(which zsh)
 
 ### Install oh my zsh
 
-`sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools       install.sh -O -)"`
+`sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"`
 
 `sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
 
@@ -20,3 +20,6 @@ chsh -s $(which zsh)
 https://ohmyz.sh/
 
 https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH
+
+Bash vs ZFS vs Fish
+https://zellwk.com/blog/bash-zsh-fish/
