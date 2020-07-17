@@ -21,17 +21,19 @@ toplevel         (volume root directory, not to be mounted by default)
 
 512 MB NVME
 
-```
-toplevel          (volume root directory, not to be mounted by default)
-  +-- @           (subvolume root directory, to be mounted at /)
-  +-- @home       (subvolume root directory, to be mounted at /home)
-```
-
 sudo btrfs subvolume list /
 
 ```
 ID 263 gen 14901 top level 5 path @
 ID 264 gen 14900 top level 5 path @home
+```
+
+### Layout
+
+```
+toplevel          (volume root directory, not to be mounted by default)
+  +-- @           (subvolume root directory, to be mounted at /)
+  +-- @home       (subvolume root directory, to be mounted at /home)
 ```
 
 ## NAS
@@ -56,7 +58,8 @@ ID 9090 gen 43952 top level 5 path @outer_realm
 ID 9098 gen 44266 top level 5 path @library
 ```
 
-Layout
+### Layout
+
 ```
 toplevel            (volume root directory, not to be mounted by default)
   +-- @appstore     (subvolume root directory, to be mounted at /mnt/appstore)
@@ -69,6 +72,18 @@ toplevel            (volume root directory, not to be mounted by default)
   +-- @library      (subvolume root directory, to be mounted at /mnt/library)
 ```
 
+### Usage
+
+| Subvolume | Contents |
+|-----------|----------|
+| @appstore |          |
+| @arcade |          |
+| @archive |          |
+| @junkdrawer |          |
+| @loading_dock |          |
+| @media_center |          |
+| @outer_realm |          |
+| @library | Ebooks, audiobooks, comics, games/RPG, magazines, audio drama |
 # /etc/fstab
 
 ```
