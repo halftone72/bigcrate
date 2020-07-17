@@ -76,13 +76,13 @@ toplevel            (volume root directory, not to be mounted by default)
 
 | Subvolume | Contents |
 |-----------|----------|
-| @appstore |          |
-| @arcade |          |
-| @archive |          |
-| @junkdrawer |          |
-| @loading_dock |          |
-| @media_center |          |
-| @outer_realm |          |
+| @appstore | Software and driver repository, ISOs |
+| @arcade | Emulators and ROMs |
+| @archive | Work archive, other long term storage |
+| @junkdrawer | Misc files that don't fit elsewhere |
+| @loading_dock | An open share for file transfer/sharing |
+| @media_center | Movies, TV, Other video|
+| @outer_realm | Out of bounds, Download folder for Transmission |
 | @library | Ebooks, audiobooks, comics, games/RPG, magazines, audio drama |
 
 # /etc/fstab
