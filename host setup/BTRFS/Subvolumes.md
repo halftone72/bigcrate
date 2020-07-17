@@ -84,6 +84,7 @@ toplevel            (volume root directory, not to be mounted by default)
 | @media_center |          |
 | @outer_realm |          |
 | @library | Ebooks, audiobooks, comics, games/RPG, magazines, audio drama |
+
 # /etc/fstab
 
 ```
