@@ -23,10 +23,10 @@ List snapshots for configuration
 `sudo snapper config_name list`
 
 Create simple snapshot
-`snapper -c config_name create --description desc`
+`snapper -c config_name create --cleanup-algorithm timeline --description desc`
 
 Create pre/post snapshots
-`snapper -c config_name create --command cmd`
+`snapper -c config_name create --command cmd --cleanup-algorithm timeline`
 cmd = command to be wrapped by snapshots
 
 Delete snapshot
