@@ -15,7 +15,7 @@ chsh -s $(which zsh)
 
 ---
 
-# Reference and Notes
+# Reference
 
 https://ohmyz.sh/
 

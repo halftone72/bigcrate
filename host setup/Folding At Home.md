@@ -71,7 +71,14 @@ Stop and start service
 `sudo systemctl start fahclient.service`
 
 Use the web client to configure name and confirm GPU is picking up jobs
-http://client.foldingathome.org
+
+The cores, logs, and work folder, plus current log file, are located here:
+
+`/var/lib/fahclient`
+
+The config.xml file is located here:
+
+`/etc/fahclient`
 
 ---
 
