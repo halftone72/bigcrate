@@ -36,7 +36,7 @@ Mount storage pool
 
 ### Install some stuff
 
-`sudo apt install btrfs-progs clinfo samba openssh-server glances lynx`
+`sudo apt install btrfs-progs clinfo samba openssh-server glances lynx gnome-tweaks`
 
 ### Install AMD drivers
 
