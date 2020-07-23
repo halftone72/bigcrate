@@ -4,6 +4,9 @@
 
 Install with defaults. Do not encrypt system disk (unable to reconnect remotely to unlock on reboot.) Use system_drive.md for post-installation setup.
 
+### apt-btrfs-snapper and snapper
+Install Snapper and apt-btrfs-snapper
+
 ### Updates
 `sudo apt update && sudo apt upgrade`
 
