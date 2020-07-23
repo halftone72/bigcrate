@@ -1,7 +1,7 @@
 # Install
 
 Install dependencies
-`sudo apt install snapper python`
+`sudo apt install snapper python python-apt python-distutils-extra`
 
 Clone repository
 `git clone https://github.com/agronick/apt-btrfs-snapper.git`
