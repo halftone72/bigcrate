@@ -1,0 +1,29 @@
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a
+# device; this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab(5).
+#
+# <file system>  <mount point>  <type>  <options>  <dump>  <pass>
+/dev/disk/by-id/wwn-0x5000c500b5162876nvme-PCIe_SSD_19050751200240-part1 /boot/efi  vfat  umask=0077  0  0
+/dev/mapper/cryptswap  none  swap  defaults  0  0
+/dev/disk/by-id/wwn-0x5000c500b5162876nvme-PCIe_SSD_19050751200240-part3  /  btrfs  defaults,subvol=@,ssd,noatime,space_cache  0  0
+/dev/disk/by-id/wwn-0x5000c500b5162876nvme-PCIe_SSD_19050751200240-part3  /home  btrfs  defaults,subvol=@home,ssd,noatime,space_cache  0  0
+/dev/disk/by-id/wwn-0x5000c500b5162876nvme-PCIe_SSD_19050751200240-part3  /home  btrfs  defaults,subvol=@var,ssd,noatime,space_cache  0  0
+#
+# Storage root, use subvolumes-only by default
+# /dev/disk/by-id/wwn-0x5000cca257eb5e67 /mnt/storage btrfs nosuid,nodev,nofail,autodefrag,compress=zstd,noatime 0 0
+#
+#
+/dev/disk/by-id/wwn-0x5000cca257eb5e67 /mnt/appstore btrfs subvol=@appstore,nosuid,nodev,nofail,autodefrag,compress=zstd,noatime 0 0
+/dev/disk/by-id/wwn-0x5000cca257eb5e67 /mnt/arcade btrfs subvol=@arcade,nosuid,nodev,nofail,autodefrag,compress=zstd,noatime 0 0
+/dev/disk/by-id/wwn-0x5000cca257eb5e67 /mnt/archive btrfs subvol=@archive,nosuid,nodev,nofail,autodefrag,compress=zstd,noatime 0 0
+/dev/disk/by-id/wwn-0x5000cca257eb5e67 /mnt/junkdrawer btrfs subvol=@junkdrawer,nosuid,nodev,nofail,autodefrag,compress=zstd,noatime 0 0
+/dev/disk/by-id/wwn-0x5000cca257eb5e67 /mnt/loading_dock btrfs subvol=@loading_dock,nosuid,nodev,nofail,autodefrag,compress=zstd,noatime 0 0
+/dev/disk/by-id/wwn-0x5000cca257eb5e67 /mnt/media_center btrfs subvol=@media_center,nosuid,nodev,nofail,autodefrag,compress=zstd,noatime 0 0
+/dev/disk/by-id/wwn-0x5000cca257eb5e67 /mnt/outer_realm btrfs subvol=@outer_realm,nosuid,nodev,nofail,autodefrag,compress=zstd,noatime 0 0
+/dev/disk/by-id/wwn-0x5000cca257eb5e67 /mnt/library btrfs subvol=@library,nosuid,nodev,nofail,autodefrag,compress=zstd,noatime 0 0
+#
+# vmworld
+#
+/dev/disk/by-id/wwn-0x5f8db4c381801218-part1  /var/lib/libvirt auto nosuid,nodev,nofail 0 0

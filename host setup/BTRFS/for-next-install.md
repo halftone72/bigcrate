@@ -1,4 +1,0 @@
-- Document steps for new install on existing disk
-- Add /var subvolume (excludes from snapshot - fahclient data and logsnot overwritten with rollback, VMs stored here)
-- Format vmworld drive as ext4
-- mount under /var/lib/libvirt
