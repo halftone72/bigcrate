@@ -18,7 +18,7 @@
 `cd /mnt`
 `ls | grep -v @ | xargs mv -t @`
 10. Create mount points
-`sudo mkdir /mnt/storage /mnt/appstore /mnt/arcade /mnt/archive /mnt/junkdrawer /mnt/loading_dock /mnt/media_center /mnt/outer_realm /mnt/library`
+`sudo mkdir /mnt/@/mnt/storage /mnt/@/mnt/appstore /mnt/@/mnt/arcade /mnt/@/mnt/archive /mnt/@/mnt/junkdrawer /mnt/@/mnt/loading_dock /mnt/@/mnt/media_center /mnt/@/mnt/outer_realm /mnt/@/mnt/library /mnt/@/mnt/tardis`
 11. Edit fstab
 `sudo nano /mnt/@/etc/fstab`
 12. Replace contents with fstab from github source and save
