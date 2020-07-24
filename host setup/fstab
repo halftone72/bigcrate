@@ -9,7 +9,7 @@
 /dev/mapper/cryptswap  none  swap  defaults  0  0
 /dev/disk/by-id/wwn-0x5000c500b5162876nvme-PCIe_SSD_19050751200240-part3  /  btrfs  defaults,subvol=@,ssd,noatime,space_cache  0  0
 /dev/disk/by-id/wwn-0x5000c500b5162876nvme-PCIe_SSD_19050751200240-part3  /home  btrfs  defaults,subvol=@home,ssd,noatime,space_cache  0  0
-/dev/disk/by-id/wwn-0x5000c500b5162876nvme-PCIe_SSD_19050751200240-part3  /home  btrfs  defaults,subvol=@var,ssd,noatime,space_cache  0  0
+/dev/disk/by-id/wwn-0x5000c500b5162876nvme-PCIe_SSD_19050751200240-part3  /var  btrfs  defaults,subvol=@var,ssd,noatime,space_cache  0  0
 #
 # Storage root, use subvolumes-only by default
 # /dev/disk/by-id/wwn-0x5000cca257eb5e67 /mnt/storage btrfs nosuid,nodev,nofail,autodefrag,compress=zstd,noatime 0 0
