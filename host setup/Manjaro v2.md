@@ -29,6 +29,9 @@ Enable service
 Setup mount points for storage
 `sudo mkdir /mnt/storage /mnt/appstore /mnt/arcade /mnt/archive /mnt/junkdrawer /mnt/loading_dock /mnt/media_center /mnt/outer_realm /mnt/library /mnt/tardis`
 
+Install dnsutils (for dig)
+`sudo pamac install dnsutils`
+
 ---
 
 # Reference
@@ -46,4 +49,3 @@ https://tutorialforlinux.com/2020/02/06/how-to-install-radeon-rx-570-driver-on-m
     valid users = halftone72
 
 
-sudo btrfs balance start -dconvert=raid0 /mnt/storage
