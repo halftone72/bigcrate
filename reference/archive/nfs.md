@@ -31,3 +31,4 @@ https://www.linuxbabe.com/ubuntu/nfs-share
 
 https://www.digitalocean.com/community/tutorials/how-to-set-up-an-nfs-mount-on-ubuntu-16-04
 
+https://computingforgeeks.com/how-to-configure-nfs-client-on-ubuntu-debian-linux/
